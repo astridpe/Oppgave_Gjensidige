@@ -9,16 +9,28 @@ const PokemonCard: React.FunctionComponent<Props> = ({ pokemon }) => {
   if (pokemon) {
     return (
       <div className='pokemonCard'>
-        <p>{pokemon.name}</p>
-        <img
+        <div>
+          <div className='topText'>
+        <span>{pokemon.types[0].type.name} pokémon</span>
+        <span>{pokemon.name}</span>
+        </div>
+        <img className='pokemonImg'
           src={pokemon.sprites.other.dream_world.front_default}
           alt={`${pokemon.name} illustration`}
         />
-        <p>Id: {pokemon.id}</p>
-        <p>Type: {pokemon.types[0].type.name}</p>
-        <p>Height: {pokemon.height * 10} cm</p>
-        <p>Weight: {pokemon.weight / 10} kg</p>
-        <p>Moves: {pokemon.moves[0].move.name}</p>
+        <div className='cardImg'>
+        <img src={require(`../cards/${pokemon.types[0].type.name}.png`)}
+        />
+        </div>
+        <div className='bottomText'>
+        <span>Id: {pokemon.id}</span>
+        <span>Height: {pokemon.height * 10} cm</span>
+        <span>Weight: {pokemon.weight / 10} kg</span>
+        </div>
+        <div className='moves'>
+        <span>Moves: {pokemon.moves[0].move.name}</span>
+        </div>
+      </div>
       </div>
     );
   }

@@ -11,7 +11,7 @@ const App = () => {
   const [pokemon, setPokemon] = useState<Pokemon>();
 
   useEffect(() => {
-    fetchPokemon('bulbasaur').then((res) => setPokemon(res));
+    fetchPokemon('pikachu').then((res) => setPokemon(res));
   }, []);
 
   return (
