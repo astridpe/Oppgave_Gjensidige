@@ -5,7 +5,7 @@ export const fetchPokemon = async (pokemonName: string) =>
     (res) => {
       const expectedResponseCode = 200;
       if (res.status === expectedResponseCode) {
-        return res.json();
+        return res.json();  
       }
       throw new Error(
         `Got HTTP status code ${res.status}, when HTTP status code ${expectedResponseCode} was expected`

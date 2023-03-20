@@ -3,6 +3,7 @@ import { fetchPokemon } from './utils';
 import { Pokemon } from './types';
 
 import InfoContainer from './components/InfoContainer';
+import PokemonCard from './components/PokemonCard';
 
 import './app.css';
 
@@ -15,7 +16,7 @@ const App = () => {
 
   return (
     <div className='appRoot'>
-      <InfoContainer pokemon={pokemon} />
+      <PokemonCard pokemon={pokemon} />
     </div>
   );
 };
