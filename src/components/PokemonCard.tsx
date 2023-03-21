@@ -8,29 +8,34 @@ interface Props {
 const PokemonCard: React.FunctionComponent<Props> = ({ pokemon }) => {
   if (pokemon) {
     return (
-      <div className='pokemonCard'>
-        <div>
-          <div className='topText'>
+      <div className='pokemonCard' style={{backgroundImage: `url(`+ require(`../cards/${pokemon.types[0].type.name}.png`) + `)`}}>
+        <div className='title-row'>
         <span>{pokemon.types[0].type.name} pokémon</span>
-        <span>{pokemon.name}</span>
+        <h1>{pokemon.name}</h1>
         </div>
-        <img className='pokemonImg'
+        <div className='pokemon-img'>
+        <img
           src={pokemon.sprites.other.dream_world.front_default}
           alt={`${pokemon.name} illustration`}
         />
-        <div className='cardImg'>
-        <img src={require(`../cards/${pokemon.types[0].type.name}.png`)}
-        />
         </div>
-        <div className='bottomText'>
-        <span>Id: {pokemon.id}</span>
-        <span>Height: {pokemon.height * 10} cm</span>
-        <span>Weight: {pokemon.weight / 10} kg</span>
+        <div className='pokemon-info'>
+        <span className='info-span'>Id: {pokemon.id}</span>
+        <span className='info-span'>Height: {pokemon.height * 10} cm</span>
+        <span className='info-span'>Weight: {pokemon.weight / 10} kg</span>
         </div>
-        <div className='moves'>
-        <span>Moves: {pokemon.moves[0].move.name}</span>
+        <div className='pokemon-ability'>
+          <span className='ability-span'>{pokemon.abilities[0].ability.name}</span>
         </div>
-      </div>
+        <h2>Moves:</h2>
+        <div className='pokemon-moves'>
+          <span className='moves-header'>{pokemon.moves[0].move.name}</span>
+          <span className='moves-description'>description</span>
+        </div>
+        <div className='pokemon-moves'>
+          <span className='moves-header'>{pokemon.moves[1].move.name}</span>
+          <span className='moves-description'>description</span>
+        </div>
       </div>
     );
   }

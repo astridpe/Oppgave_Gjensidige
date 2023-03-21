@@ -3,50 +3,104 @@
   justify-content: center;
 }
 
-.infoContainer {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
   display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-  width: 400px;
+  align-items: center;
+  justify-content: center;
+  background-color: #dcdcdc;
+}
+
+h2 {
+  margin: 5px 20px;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.pokemonCard {
+  display: grid;
+  width: 5in;
+  height: 7in;
+  border-radius: 15px;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+  border: 15px solid #e7c30d;
+  box-shadow: 15px 12px 30px 0px rgb(41, 40, 40);
+}
+
+.title-row{
+  display: grid;
+  height: 45px;
+  text-transform: capitalize;
+  margin: 5px 20px;
+}
+
+.pokemon-img{
+  margin: 0 20px;
+  background-image: radial-gradient(white, rgb(0, 0, 0));
+  height: 270px;
   text-align: center;
-  font-weight: 100;
-  font-family: Arial, Helvetica, sans-serif;
+  border: 5px solid #e7c30d;
+  padding-top: 40px;
+  overflow: hidden;
+}
+.img {
+  width: 100%;
+  
+}
+.pokemon-info{
+  background-color: #e4c426;
+  height: 25px;
+  margin: 0 40px;
+  text-align: center;
+  padding-top: 3px;
+  box-shadow: 5px 5px 13px 0px rgb(41, 40, 40);
 }
 
-
-.cardImg{
-  margin-top: 4em;
-}
-
-.topText{
-  position: absolute;
-  background-color: yellow;
-  top: 7em;
-  left: 40em;
-}
-
-.pokemonImg{
-  background-color: blue;
-  position: absolute;
-  bottom: 24.9em;
-  left: 38.7em;
-  width: 200px;
-  padding: 0 2.3em;
- 
-}
-
-.bottomText{
-  position: absolute;
-  background-color: blueviolet;
-  bottom: 22em;
-  left: 40em
+.info-span{
+  padding: 0 5px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
 
 }
 
-.moves {
-  position: absolute;
-  background-color: yellowgreen;
-  bottom: 20em;
-  left: 40em;
-
+.pokemon-ability{
+  padding-top: 20px;
+  height: 60px;
+  margin: 0 20px;
+  text-align: center;
+  border-bottom: 2px solid black;
 }
+
+.ability-span{
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.pokemon-moves {
+  height: 70px;
+  margin: 0 20px;
+  display: grid;
+}
+
+.moves-header{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.moves-description{
+  margin-bottom: 20px;
+}
+
+
