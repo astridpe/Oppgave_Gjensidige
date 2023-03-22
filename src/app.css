@@ -37,14 +37,14 @@ h2 {
   box-shadow: 15px 12px 30px 0px rgb(41, 40, 40);
 }
 
-.title-row{
+.title-row {
   display: grid;
   height: 45px;
   text-transform: capitalize;
   margin: 5px 20px;
 }
 
-.pokemon-img{
+.pokemon-img {
   margin: 0 20px;
   background-image: radial-gradient(white, rgb(0, 0, 0));
   height: 270px;
@@ -53,11 +53,12 @@ h2 {
   padding-top: 40px;
   overflow: hidden;
 }
+
 .img {
   width: 100%;
   
 }
-.pokemon-info{
+.pokemon-info {
   background-color: #e4c426;
   height: 25px;
   margin: 0 40px;
@@ -66,15 +67,14 @@ h2 {
   box-shadow: 5px 5px 13px 0px rgb(41, 40, 40);
 }
 
-.info-span{
+.info-span {
   padding: 0 5px;
   font-weight: bold;
   font-style: italic;
   font-size: 14px;
-
 }
 
-.pokemon-ability{
+.pokemon-ability {
   padding-top: 20px;
   height: 60px;
   margin: 0 20px;
@@ -82,7 +82,7 @@ h2 {
   border-bottom: 2px solid black;
 }
 
-.ability-span{
+.ability-span {
   font-weight: bold;
   text-transform: capitalize;
   font-size: 20px;
@@ -94,12 +94,12 @@ h2 {
   display: grid;
 }
 
-.moves-header{
+.moves-header {
   font-weight: bold;
   text-transform: capitalize;
 }
 
-.moves-description{
+.moves-description {
   margin-bottom: 20px;
 }
 
